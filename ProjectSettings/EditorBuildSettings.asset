@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/_preload.unity
+    guid: 6f9450aaeb84f6a46bcc05bf6eca180a
+  - enabled: 1
+    path: Assets/Scenes/arkanoid/arkanoid1.unity
+    guid: 10a207474e30ca54294604392798d76c
+  - enabled: 1
+    path: Assets/Scenes/arkanoid/arkanoid2.unity
+    guid: 0205f8e470101534ab0d92b1c9daec57
+  - enabled: 1
+    path: Assets/Scenes/arkanoid/arkanoid3.unity
+    guid: 4a5477bb17cb94243b04674ccf3ec5bc
+  - enabled: 1
+    path: Assets/Scenes/arkanoid/arkanoid4.unity
+    guid: 0e597005d1d993e478256fa144d0d9bc
+  - enabled: 1
+    path: Assets/Scenes/arkanoid/arkanoid5.unity
+    guid: 7997c872d0701764da45290a3f5d13af
+  m_configObjects: {}
