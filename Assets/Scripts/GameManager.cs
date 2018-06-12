@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
 
     private int level = 1;
     private string gameType;
-    private List<int> LevelScores = new List<int>(new int[] { 270, 690, 1300, 2110, 2840 });
+    private List<int> LevelScores = new List<int>(new int[] { 270, 720, 1260, 2070, 2800 });
 
     public int points;
     public int lives;
@@ -43,6 +43,13 @@ public class GameManager : MonoBehaviour {
         InitGame();
     }
 
+    public void ResetGame()
+    {
+        points = 0;
+        level = 1;
+        lives = 100;
+    }
+
     public void Restart()
     {
         points = 0;
@@ -60,8 +67,13 @@ public class GameManager : MonoBehaviour {
     public void LoadNextLevel ()
     {
         level++;
-        if (LevelScores.Count == level - 1)
+        if (LevelScores.Count == level)
+        {
+            level = 1;
+            points = 0;
+            lives = 100;
             SceneManager.LoadScene(0);
+        }
         Debug.Log(level);
         DDOL dd = DDOL.GetInstance();
         dd.level = level;

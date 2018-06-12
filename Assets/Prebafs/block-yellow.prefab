@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitsToKill: 1
-  points: 0
+  points: 10
 --- !u!212 &212638658781439386
 SpriteRenderer:
   m_ObjectHideFlags: 1

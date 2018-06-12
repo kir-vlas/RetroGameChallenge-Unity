@@ -12,7 +12,7 @@ public class BallScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        ballInitialForce = new Vector2(100.0f, 300.0f);
+        ballInitialForce = new Vector2(80.0f, 240.0f);
         ballIsActive = false;
         ballPosition = transform.position;
     }
