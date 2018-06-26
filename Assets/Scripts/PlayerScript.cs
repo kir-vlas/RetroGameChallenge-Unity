@@ -23,6 +23,7 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
+        Debug.Log("4575");
         playerPosition = gameObject.transform.position;
         pointsText = GameObject.Find("LivesText").GetComponent<Text>();
         pointsText.text = "Lives: " + gameManager.lives ;

@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour {
         else if (instance != this)
 
             Destroy(gameObject);
-
+        Debug.Log("gm");
         DontDestroyOnLoad(transform.gameObject);
         InitGame();
     }
@@ -85,6 +85,7 @@ public class GameManager : MonoBehaviour {
 
     void InitGame ()
     {
+        Debug.Log("gm");
         DDOL dd = DDOL.GetInstance();
         gameType = "arkanoid";
         level = dd.level;
