@@ -56,14 +56,20 @@ public class PlayerScript : MonoBehaviour
         directionInput = InputAxis;
     }
 
+    bool CheckPoints()
+    {
+        GameObject[] blocks = GameObject.FindGameObjectsWithTag("Block");
+        if (blocks.Length == 0) return true;
+        return false;
+    }
+
     void Update()
     {
-        if (gameManager.CheckPoints())
+        if (CheckPoints())
         {
             gameManager.LoadNextLevel();
             Debug.Log(gameManager.getLevel());
         }
-        Debug.Log(gameManager.CheckPoints());
         if (gameManager.lives == 0)
         {
             RestartGame();

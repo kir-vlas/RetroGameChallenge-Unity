@@ -6,6 +6,14 @@ public class GhostMove : MonoBehaviour {
     public Transform[] waypoints;
     int cur = 0;
     public float speed;
+    public GameObject playerObject;
+    private Vector3 ghostPosition;
+
+    private void Start()
+    {
+        ghostPosition = transform.position;
+    }
+
 
     void FixedUpdate ()
     {
@@ -24,10 +32,18 @@ public class GhostMove : MonoBehaviour {
         
     }
 
+    void ReturnGhost()
+    {
+        cur = 0;
+        transform.position = ghostPosition;
+    }
+
     void OnTriggerEnter2D(Collider2D co)
     {
         if (co.name == "pacman")
-            Destroy(co.gameObject);
+        {
+            playerObject.SendMessage("TakeLife");
+        }
     }
 }
 

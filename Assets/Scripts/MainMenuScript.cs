@@ -13,6 +13,10 @@ public class MainMenuScript : MonoBehaviour{
         SceneManager.LoadScene("arkanoid1");
     }
 
+    public void OnButton2Click()
+    {
+        SceneManager.LoadScene("pacman1");
+    }
     void Update()
     {
         

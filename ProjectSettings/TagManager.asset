@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ball
+  - Enemy
+  - Dot
+  - Block
   layers:
   - Default
   - TransparentFX

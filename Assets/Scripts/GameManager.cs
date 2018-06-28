@@ -7,16 +7,27 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
 
-    private int level = 1;
+    private int currentLevel = 1;
     private string gameType;
-    private List<int> LevelScores = new List<int>(new int[] { 270, 720, 1260, 2070, 2800 });
-
+    int[] levelCounter = { 5, 3 };
+    private int fruitCounter = 0;
+    private int currentGame = 0;
     public int points;
     public int lives;
 
+    public void setGame(string game)
+    {
+        gameType = game;
+    }
+
     public int getLevel()
     {
-        return level;
+        return currentLevel;
+    }
+
+    public void addFruit()
+    {
+        fruitCounter++;
     }
 
     public void SetOnNextLevel()
@@ -24,7 +35,7 @@ public class GameManager : MonoBehaviour {
         DDOL dd = DDOL.GetInstance();
         dd.change = false;
         points = dd.points;
-        level = dd.level;
+        currentLevel = dd.level;
         lives = dd.lives;
     }
 
@@ -46,7 +57,7 @@ public class GameManager : MonoBehaviour {
     public void ResetGame()
     {
         points = 0;
-        level = 1;
+        currentLevel = 1;
         lives = 100;
     }
 
@@ -54,33 +65,27 @@ public class GameManager : MonoBehaviour {
     {
         points = 0;
         lives = 100;
-        SceneManager.LoadScene(gameType+level);
+        SceneManager.LoadScene(gameType+currentLevel);
     }
 
-    public bool CheckPoints()
-    {
-        Debug.Log(points + "  " + level + " " + LevelScores[level - 1]);
-        if (points >= LevelScores[level - 1]) { return true; }
-        return false;
-    }
 
     public void LoadNextLevel ()
     {
-        level++;
-        if (LevelScores.Count == level)
+        currentLevel++;
+        if (levelCounter[currentGame] == currentLevel)
         {
-            level = 1;
+            currentLevel = 1;
             points = 0;
             lives = 100;
             SceneManager.LoadScene(0);
         }
-        Debug.Log(level);
+        Debug.Log(currentLevel);
         DDOL dd = DDOL.GetInstance();
-        dd.level = level;
+        dd.level = currentLevel;
         dd.lives = lives;
         dd.points = points;
         dd.change = true;
-        SceneManager.LoadScene(gameType+level);
+        SceneManager.LoadScene(gameType+currentLevel);
     }
 
     void InitGame ()
@@ -88,7 +93,7 @@ public class GameManager : MonoBehaviour {
         Debug.Log("gm");
         DDOL dd = DDOL.GetInstance();
         gameType = "arkanoid";
-        level = dd.level;
+        currentLevel = dd.level;
         points = dd.points;
         lives = dd.lives;
     }

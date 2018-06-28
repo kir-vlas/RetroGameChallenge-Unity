@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/arkanoid/arkanoid5.unity
     guid: 7997c872d0701764da45290a3f5d13af
+  - enabled: 1
+    path: Assets/Scenes/pacman/pacman1.unity
+    guid: 904e2c3472caf834f96ba0e5cecc2f16
+  - enabled: 1
+    path: Assets/Scenes/pacman/pacman2.unity
+    guid: d273d51f73777644ea68ab8244d94418
   m_configObjects: {}
