@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour {
     private string gameType;
     int[] levelCounter = { 5, 3 };
     private int fruitCounter = 0;
-    private int currentGame = 0;
+    private int currentGame = 1;
     public int points;
     public int lives;
 
@@ -28,6 +28,11 @@ public class GameManager : MonoBehaviour {
     public void addFruit()
     {
         fruitCounter++;
+    }
+
+    public int getFruitCounter()
+    {
+        return fruitCounter;
     }
 
     public void SetOnNextLevel()
@@ -71,21 +76,23 @@ public class GameManager : MonoBehaviour {
 
     public void LoadNextLevel ()
     {
-        currentLevel++;
-        if (levelCounter[currentGame] == currentLevel)
+        if (levelCounter[currentGame] == currentLevel && fruitCounter !=3)
         {
             currentLevel = 1;
             points = 0;
             lives = 100;
             SceneManager.LoadScene(0);
+            return;
         }
+        currentLevel++;
         Debug.Log(currentLevel);
         DDOL dd = DDOL.GetInstance();
         dd.level = currentLevel;
         dd.lives = lives;
         dd.points = points;
         dd.change = true;
-        SceneManager.LoadScene(gameType+currentLevel);
+        if (fruitCounter == 3) SceneManager.LoadScene("pacman4");
+        else SceneManager.LoadScene(gameType+currentLevel);
     }
 
     void InitGame ()

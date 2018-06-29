@@ -13,17 +13,19 @@ public class PacmanMove : MonoBehaviour {
     private int directionInput;
     private Text pointsText;
     private Text livesText;
-
+    private bool levelLoading;
     void Start()
     {
+        levelLoading = false;
         gameManager = FindObjectOfType<GameManager>();
         gameManager.setGame("pacman");
         playerPosition = transform.position;
         dest = transform.position;
+        addUnlockedFruits(gameManager.getFruitCounter());
         pointsText = GameObject.Find("LivesText").GetComponent<Text>();
         pointsText.text = "Lives: " + gameManager.lives;
         pointsText = GameObject.Find("PointsText").GetComponent<Text>();
-        pointsText.text = "Points: " + gameManager.points;
+        pointsText.text = "Points: " + gameManager.points; 
     }
 
     bool checkDots()
@@ -44,6 +46,14 @@ public class PacmanMove : MonoBehaviour {
         Image fruitImage = GameObject.Find(fruitType + "Image").GetComponent<Image>();
         fruitImage.enabled = true;
         gameManager.addFruit();
+    }
+
+    void addUnlockedFruits(int unlocked)
+    {
+        GameObject[] fruits = GameObject.FindGameObjectsWithTag("FruitImage");
+        for (int i = 0; i < unlocked; i++){
+            fruits[fruits.Length-i-1].GetComponent<Image>().enabled = true;
+        }
     }
 
     void TakeLife()
@@ -70,13 +80,23 @@ public class PacmanMove : MonoBehaviour {
     {
         directionInput = button;
     }
+
+    void LoadLevel()
+    {
+        if (!levelLoading)
+        {
+            levelLoading = true;
+            gameManager.LoadNextLevel();
+        }
+    }
     void FixedUpdate()
     {
 
         Vector2 p = Vector2.MoveTowards(transform.position, dest, speed);
         GetComponent<Rigidbody2D>().MovePosition(p);
-        if (checkDots()) gameManager.LoadNextLevel();
-        if (false)
+        if (checkDots())
+            LoadLevel();
+        if (true)
         {
             if (Input.GetKey(KeyCode.UpArrow) && valid(Vector2.up))
                 dest = (Vector2)transform.position + Vector2.up;
@@ -87,7 +107,7 @@ public class PacmanMove : MonoBehaviour {
             if (Input.GetKey(KeyCode.LeftArrow) && valid(Vector2.left))
                 dest = (Vector2)transform.position + Vector2.left;
         }
-        if (true)
+        if (false)
         {
             if (directionInput == 1 && valid(Vector2.up))
                 dest = (Vector2)transform.position + Vector2.up;

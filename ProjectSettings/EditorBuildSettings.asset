@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/pacman/pacman2.unity
     guid: d273d51f73777644ea68ab8244d94418
+  - enabled: 1
+    path: Assets/Scenes/pacman/pacman3.unity
+    guid: 8ce1ab2e818fd334fa24383b1b80ae7a
+  - enabled: 1
+    path: Assets/Scenes/pacman/pacman4.unity
+    guid: d920acd38b9c4fb4c8c842403d649227
   m_configObjects: {}
