@@ -10,13 +10,16 @@ public class FruitScript : MonoBehaviour {
     private Vector3 fruitPosition;
     public float timeLeft;
     private bool motion = false;
+    private GameManager gameManager;
 
 	void Start () {
         fruitPosition = transform.position;
         transform.position = new Vector3(100,100);
-	}
+        gameManager = FindObjectOfType<GameManager>();
+    }
 	
 	void FixedUpdate () {
+        if (gameManager.IsPaused()) return;
         timeLeft -= Time.deltaTime;
         if (timeLeft < 0 && !motion)
         {

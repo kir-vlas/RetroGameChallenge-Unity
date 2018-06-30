@@ -7,16 +7,19 @@ public class GhostMove : MonoBehaviour {
     int cur = 0;
     public float speed;
     public GameObject playerObject;
+    private GameManager gameManager;
     private Vector3 ghostPosition;
 
     private void Start()
     {
         ghostPosition = transform.position;
+        gameManager = FindObjectOfType<GameManager>();
     }
 
 
     void FixedUpdate ()
     {
+        if (gameManager.IsPaused()) return;
         if (transform.position != waypoints[cur].position)
         {
             Vector2 p = Vector2.MoveTowards(transform.position,

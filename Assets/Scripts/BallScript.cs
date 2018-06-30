@@ -47,8 +47,7 @@ public class BallScript : MonoBehaviour {
             GetComponent<Rigidbody2D>().AddForce(ballInitialForce);
             ballPosition.x = playerObject.transform.position.x;
             ballPosition.y = 0.371f;
-            transform.position = ballPosition;
-            //GetComponent<Rigidbody2D>().isKinematic = true;
+            transform.position = ballPosition;           
             playerObject.SendMessage("TakeLife");
         }
     }

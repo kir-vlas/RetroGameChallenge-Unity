@@ -28319,6 +28319,16 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: -19
       objectReference: {fileID: 0}
+    - target: {fileID: 114026212330387384, guid: 5f08bc32ab6115843b7170643e73be0d,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 555286979}
+    - target: {fileID: 114026212330387384, guid: 5f08bc32ab6115843b7170643e73be0d,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PauseGame
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f08bc32ab6115843b7170643e73be0d, type: 2}
   m_IsPrefabParent: 0

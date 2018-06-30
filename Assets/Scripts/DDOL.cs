@@ -15,10 +15,9 @@ public class DDOL : MonoBehaviour {
     private DDOL()
     {
         level = 1;
-        points = 0;
-        lives = 100;
+
     }
-	// Use this for initialization
+	
 	void Awake () {
         instance = new DDOL();
         DontDestroyOnLoad(transform.gameObject);

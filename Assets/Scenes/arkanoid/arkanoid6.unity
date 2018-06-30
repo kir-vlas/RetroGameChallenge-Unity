@@ -122,10 +122,10 @@ GameObject:
   m_Component:
   - component: {fileID: 61296718}
   - component: {fileID: 61296717}
-  - component: {fileID: 61296719}
   - component: {fileID: 61296720}
+  - component: {fileID: 61296719}
   m_Layer: 0
-  m_Name: block-purple (3)
+  m_Name: block-purple6
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -197,11 +197,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 61296716}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 1181341230}
+  - {fileID: 891610365}
+  - {fileID: 1013134979}
+  - {fileID: 1417141181}
+  - {fileID: 640826258}
 --- !u!61 &61296720
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -236,10 +241,10 @@ GameObject:
   m_Component:
   - component: {fileID: 85385295}
   - component: {fileID: 85385294}
-  - component: {fileID: 85385296}
   - component: {fileID: 85385297}
+  - component: {fileID: 85385296}
   m_Layer: 0
-  m_Name: block-yellow (1)
+  m_Name: block-yellow8
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -311,11 +316,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 85385293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 656574097}
+  - {fileID: 543430978}
+  - {fileID: 640826258}
+  - {fileID: 891610365}
+  - {fileID: 335924314}
 --- !u!61 &85385297
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -341,48 +351,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.94, y: 0.37}
   m_EdgeRadius: 0
---- !u!1001 &195686256
-Prefab:
+--- !u!1 &186715104 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1291847733721484, guid: bd31b65e2b0ff684184e7eef359308a4,
+    type: 2}
+  m_PrefabInternal: {fileID: 725430638}
+--- !u!114 &186715105
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4108528188313830, guid: 67abe249e21dcc644bfb95cf1c2533bf, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4108528188313830, guid: 67abe249e21dcc644bfb95cf1c2533bf, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.88
-      objectReference: {fileID: 0}
-    - target: {fileID: 4108528188313830, guid: 67abe249e21dcc644bfb95cf1c2533bf, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4108528188313830, guid: 67abe249e21dcc644bfb95cf1c2533bf, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4108528188313830, guid: 67abe249e21dcc644bfb95cf1c2533bf, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4108528188313830, guid: 67abe249e21dcc644bfb95cf1c2533bf, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4108528188313830, guid: 67abe249e21dcc644bfb95cf1c2533bf, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4108528188313830, guid: 67abe249e21dcc644bfb95cf1c2533bf, type: 2}
-      propertyPath: m_RootOrder
-      value: 35
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 67abe249e21dcc644bfb95cf1c2533bf, type: 2}
-  m_IsPrefabParent: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 186715104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 50
+  neirbours:
+  - {fileID: 364536825}
+  - {fileID: 483762258}
+  - {fileID: 1347890369}
 --- !u!1 &226869329
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,10 +381,10 @@ GameObject:
   m_Component:
   - component: {fileID: 226869331}
   - component: {fileID: 226869330}
-  - component: {fileID: 226869332}
   - component: {fileID: 226869333}
+  - component: {fileID: 226869332}
   m_Layer: 0
-  m_Name: block-yellow (5)
+  m_Name: block-yellow4
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -467,11 +456,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 226869329}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 928562684}
+  - {fileID: 1013134979}
+  - {fileID: 1331383239}
+  - {fileID: 1333130599}
+  - {fileID: 563735261}
+  - {fileID: 1262461252}
+  - {fileID: 800183869}
+  - {fileID: 1181341230}
 --- !u!61 &226869333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -512,10 +509,10 @@ GameObject:
   m_Component:
   - component: {fileID: 335924316}
   - component: {fileID: 335924315}
-  - component: {fileID: 335924317}
   - component: {fileID: 335924318}
+  - component: {fileID: 335924317}
   m_Layer: 0
-  m_Name: block-purple (1)
+  m_Name: block-purple8
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -587,11 +584,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 335924314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 891610365}
+  - {fileID: 640826258}
+  - {fileID: 85385293}
 --- !u!61 &335924318
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -617,6 +617,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.94, y: 0.37}
   m_EdgeRadius: 0
+--- !u!1 &364536825 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1050226162264138, guid: 89d37411136ed9c49a787cd7b0d85176,
+    type: 2}
+  m_PrefabInternal: {fileID: 608553055}
+--- !u!114 &364536826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 364536825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 50
+  neirbours:
+  - {fileID: 186715104}
+  - {fileID: 1347890369}
+  - {fileID: 483762258}
+  - {fileID: 474464815}
+  - {fileID: 2113788093}
 --- !u!1001 &430828089
 Prefab:
   m_ObjectHideFlags: 0
@@ -624,14 +647,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_Delegates.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 224638721032020340, guid: 80e78e026f81c914bae714b2b63454d9,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -722,87 +737,56 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114149324749148078, guid: 80e78e026f81c914bae714b2b63454d9,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 470666005}
-    - target: {fileID: 114149324749148078, guid: 80e78e026f81c914bae714b2b63454d9,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 470666005}
-    - target: {fileID: 114010944751226902, guid: 80e78e026f81c914bae714b2b63454d9,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 269987148}
-    - target: {fileID: 114010944751226902, guid: 80e78e026f81c914bae714b2b63454d9,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 269987148}
-    - target: {fileID: 114480690203056018, guid: 80e78e026f81c914bae714b2b63454d9,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 470666005}
-    - target: {fileID: 114480690203056018, guid: 80e78e026f81c914bae714b2b63454d9,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 470666005}
     - target: {fileID: 114167255081809846, guid: 80e78e026f81c914bae714b2b63454d9,
         type: 2}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1023542692}
-    - target: {fileID: 114893144568141148, guid: 80e78e026f81c914bae714b2b63454d9,
+    - target: {fileID: 114480690203056018, guid: 80e78e026f81c914bae714b2b63454d9,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 470666005}
+    - target: {fileID: 114480690203056018, guid: 80e78e026f81c914bae714b2b63454d9,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 470666005}
+    - target: {fileID: 114010944751226902, guid: 80e78e026f81c914bae714b2b63454d9,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 269987148}
+    - target: {fileID: 114010944751226902, guid: 80e78e026f81c914bae714b2b63454d9,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 269987148}
+    - target: {fileID: 114149324749148078, guid: 80e78e026f81c914bae714b2b63454d9,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 470666005}
+    - target: {fileID: 114149324749148078, guid: 80e78e026f81c914bae714b2b63454d9,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 470666005}
+    - target: {fileID: 1327934912832162, guid: 80e78e026f81c914bae714b2b63454d9, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114629481448601542, guid: 80e78e026f81c914bae714b2b63454d9,
         type: 2}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1023542692}
-    - target: {fileID: 0}
-      propertyPath: m_Delegates.Array.data[0].eventID
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 114195421667574040, guid: 8146d40a9dc34c74a911dc79e0027966,
+    - target: {fileID: 114629481448601542, guid: 80e78e026f81c914bae714b2b63454d9,
         type: 2}
-    - target: {fileID: 0}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PauseGame
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Delegates.Array.data[0].callback.m_TypeName
-      value: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      objectReference: {fileID: 0}
-    - target: {fileID: 1718215614486496, guid: 80e78e026f81c914bae714b2b63454d9, type: 2}
-      propertyPath: m_TagString
-      value: Pause
-      objectReference: {fileID: 0}
-    - target: {fileID: 114294240424269274, guid: 80e78e026f81c914bae714b2b63454d9,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80e78e026f81c914bae714b2b63454d9, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &470666004 stripped
@@ -816,6 +800,27 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 579723731}
   m_Script: {fileID: 11500000, guid: e599855a7698c7a40a7909be88924ed3, type: 3}
+--- !u!1 &474464815 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1591181898192306, guid: 6467ffc51e8ef16498d8700fa8a8aebb,
+    type: 2}
+  m_PrefabInternal: {fileID: 931259277}
+--- !u!114 &474464816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 474464815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 50
+  neirbours:
+  - {fileID: 364536825}
+  - {fileID: 483762258}
+  - {fileID: 2113788093}
 --- !u!1 &483762258
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,10 +830,10 @@ GameObject:
   m_Component:
   - component: {fileID: 483762260}
   - component: {fileID: 483762259}
-  - component: {fileID: 483762261}
   - component: {fileID: 483762262}
+  - component: {fileID: 483762261}
   m_Layer: 0
-  m_Name: block-yellow (8)
+  m_Name: block-yellow1
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -900,11 +905,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 483762258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 186715104}
+  - {fileID: 1347890369}
+  - {fileID: 1999001002}
+  - {fileID: 364536825}
+  - {fileID: 633972404}
+  - {fileID: 474464815}
+  - {fileID: 2113788093}
+  - {fileID: 1243911360}
 --- !u!61 &483762262
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1113,11 +1126,11 @@ GameObject:
   m_Component:
   - component: {fileID: 543430980}
   - component: {fileID: 543430979}
-  - component: {fileID: 543430981}
   - component: {fileID: 543430982}
   - component: {fileID: 543430983}
+  - component: {fileID: 543430981}
   m_Layer: 0
-  m_Name: block-green (8)
+  m_Name: block-green8
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1189,11 +1202,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 543430978}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 656574097}
+  - {fileID: 640826258}
+  - {fileID: 85385293}
 --- !u!61 &543430982
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1253,10 +1269,10 @@ GameObject:
   m_Component:
   - component: {fileID: 563735263}
   - component: {fileID: 563735262}
-  - component: {fileID: 563735264}
   - component: {fileID: 563735265}
+  - component: {fileID: 563735264}
   m_Layer: 0
-  m_Name: block-green (3)
+  m_Name: block-green5
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1328,11 +1344,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 563735261}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 1333130599}
+  - {fileID: 842196579}
+  - {fileID: 226869329}
+  - {fileID: 1013134979}
+  - {fileID: 1417141181}
 --- !u!61 &563735265
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1507,7 +1528,13 @@ Prefab:
       propertyPath: m_TagString
       value: Block
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 61286631642735042, guid: 89d37411136ed9c49a787cd7b0d85176,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114574770615897840, guid: 89d37411136ed9c49a787cd7b0d85176, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 89d37411136ed9c49a787cd7b0d85176, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &633972404
@@ -1519,10 +1546,10 @@ GameObject:
   m_Component:
   - component: {fileID: 633972406}
   - component: {fileID: 633972405}
-  - component: {fileID: 633972407}
   - component: {fileID: 633972408}
+  - component: {fileID: 633972407}
   m_Layer: 0
-  m_Name: block-yellow (7)
+  m_Name: block-yellow2
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1594,11 +1621,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 633972404}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 2113788093}
+  - {fileID: 1243911360}
+  - {fileID: 1331383239}
+  - {fileID: 1347890369}
+  - {fileID: 1999001002}
+  - {fileID: 1331383239}
+  - {fileID: 483762258}
+  - {fileID: 928562684}
 --- !u!61 &633972408
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1633,10 +1668,10 @@ GameObject:
   m_Component:
   - component: {fileID: 640826260}
   - component: {fileID: 640826259}
-  - component: {fileID: 640826261}
   - component: {fileID: 640826262}
+  - component: {fileID: 640826261}
   m_Layer: 0
-  m_Name: block-yellow (2)
+  m_Name: block-yellow7
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1708,11 +1743,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 640826258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 1417141181}
+  - {fileID: 85385293}
+  - {fileID: 842196579}
+  - {fileID: 656574097}
+  - {fileID: 543430978}
+  - {fileID: 61296716}
+  - {fileID: 891610365}
+  - {fileID: 335924314}
 --- !u!61 &640826262
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1821,10 +1864,10 @@ GameObject:
   m_Component:
   - component: {fileID: 656574099}
   - component: {fileID: 656574098}
-  - component: {fileID: 656574100}
   - component: {fileID: 656574101}
+  - component: {fileID: 656574100}
   m_Layer: 0
-  m_Name: block-green (1)
+  m_Name: block-green7
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1896,11 +1939,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 656574097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 842196579}
+  - {fileID: 543430978}
+  - {fileID: 1417141181}
+  - {fileID: 640826258}
+  - {fileID: 85385293}
 --- !u!61 &656574101
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1974,7 +2022,18 @@ Prefab:
       propertyPath: m_TagString
       value: Block
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 212719049193417744, guid: bd31b65e2b0ff684184e7eef359308a4,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61438795550272450, guid: bd31b65e2b0ff684184e7eef359308a4,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114670323945215364, guid: bd31b65e2b0ff684184e7eef359308a4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: bd31b65e2b0ff684184e7eef359308a4, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &800183869
@@ -1986,10 +2045,10 @@ GameObject:
   m_Component:
   - component: {fileID: 800183871}
   - component: {fileID: 800183870}
-  - component: {fileID: 800183872}
   - component: {fileID: 800183873}
+  - component: {fileID: 800183872}
   m_Layer: 0
-  m_Name: block-purple (5)
+  m_Name: block-purple4
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2061,11 +2120,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 800183869}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 1262461252}
+  - {fileID: 1181341230}
+  - {fileID: 928562684}
+  - {fileID: 226869329}
+  - {fileID: 1013134979}
 --- !u!61 &800183873
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2100,10 +2164,10 @@ GameObject:
   m_Component:
   - component: {fileID: 842196581}
   - component: {fileID: 842196580}
-  - component: {fileID: 842196582}
   - component: {fileID: 842196583}
+  - component: {fileID: 842196582}
   m_Layer: 0
-  m_Name: block-green (2)
+  m_Name: block-green6
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2175,11 +2239,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 842196579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 563735261}
+  - {fileID: 656574097}
+  - {fileID: 1013134979}
+  - {fileID: 1417141181}
+  - {fileID: 640826258}
 --- !u!61 &842196583
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2214,10 +2283,10 @@ GameObject:
   m_Component:
   - component: {fileID: 891610367}
   - component: {fileID: 891610366}
-  - component: {fileID: 891610368}
   - component: {fileID: 891610369}
+  - component: {fileID: 891610368}
   m_Layer: 0
-  m_Name: block-purple (2)
+  m_Name: block-purple7
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2289,11 +2358,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 891610365}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 61296716}
+  - {fileID: 335924314}
+  - {fileID: 1417141181}
+  - {fileID: 640826258}
+  - {fileID: 85385293}
 --- !u!61 &891610369
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2328,10 +2402,10 @@ GameObject:
   m_Component:
   - component: {fileID: 928562686}
   - component: {fileID: 928562685}
-  - component: {fileID: 928562687}
   - component: {fileID: 928562688}
+  - component: {fileID: 928562687}
   m_Layer: 0
-  m_Name: block-yellow (6)
+  m_Name: block-yellow3
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2403,11 +2477,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 928562684}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 1243911360}
+  - {fileID: 1331383239}
+  - {fileID: 1333130599}
+  - {fileID: 1999001002}
+  - {fileID: 1262461252}
+  - {fileID: 800183869}
+  - {fileID: 633972404}
+  - {fileID: 226869329}
 --- !u!61 &928562688
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2481,7 +2563,13 @@ Prefab:
       propertyPath: m_TagString
       value: Block
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 61665514830225888, guid: 6467ffc51e8ef16498d8700fa8a8aebb,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114941040343735744, guid: 6467ffc51e8ef16498d8700fa8a8aebb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6467ffc51e8ef16498d8700fa8a8aebb, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1013134979
@@ -2493,10 +2581,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1013134981}
   - component: {fileID: 1013134980}
-  - component: {fileID: 1013134982}
   - component: {fileID: 1013134983}
+  - component: {fileID: 1013134982}
   m_Layer: 0
-  m_Name: block-yellow (4)
+  m_Name: block-yellow5
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2568,11 +2656,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1013134979}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 226869329}
+  - {fileID: 1417141181}
+  - {fileID: 1333130599}
+  - {fileID: 563735261}
+  - {fileID: 842196579}
+  - {fileID: 800183869}
+  - {fileID: 1181341230}
+  - {fileID: 61296716}
 --- !u!61 &1013134983
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2613,10 +2709,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1181341232}
   - component: {fileID: 1181341231}
-  - component: {fileID: 1181341233}
   - component: {fileID: 1181341234}
+  - component: {fileID: 1181341233}
   m_Layer: 0
-  m_Name: block-purple (4)
+  m_Name: block-purple5
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2688,11 +2784,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1181341230}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 800183869}
+  - {fileID: 61296716}
+  - {fileID: 226869329}
+  - {fileID: 1013134979}
+  - {fileID: 1417141181}
 --- !u!61 &1181341234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2727,10 +2828,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1243911362}
   - component: {fileID: 1243911361}
-  - component: {fileID: 1243911363}
   - component: {fileID: 1243911364}
+  - component: {fileID: 1243911363}
   m_Layer: 0
-  m_Name: block-green (7)
+  m_Name: block-green2
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2802,11 +2903,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1243911360}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 2113788093}
+  - {fileID: 1331383239}
+  - {fileID: 483762258}
+  - {fileID: 633972404}
+  - {fileID: 928562684}
 --- !u!61 &1243911364
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2841,10 +2947,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1262461254}
   - component: {fileID: 1262461253}
-  - component: {fileID: 1262461255}
   - component: {fileID: 1262461256}
+  - component: {fileID: 1262461255}
   m_Layer: 0
-  m_Name: block-purple (6)
+  m_Name: block-purple3
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2916,11 +3022,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1262461252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 1999001002}
+  - {fileID: 800183869}
+  - {fileID: 633972404}
+  - {fileID: 928562684}
+  - {fileID: 226869329}
 --- !u!61 &1262461256
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2955,10 +3066,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1331383241}
   - component: {fileID: 1331383240}
-  - component: {fileID: 1331383242}
   - component: {fileID: 1331383243}
+  - component: {fileID: 1331383242}
   m_Layer: 0
-  m_Name: block-green (5)
+  m_Name: block-green3
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3030,11 +3141,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1331383239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 1243911360}
+  - {fileID: 1331383239}
+  - {fileID: 633972404}
+  - {fileID: 928562684}
+  - {fileID: 226869329}
 --- !u!61 &1331383243
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3069,10 +3185,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1333130601}
   - component: {fileID: 1333130600}
-  - component: {fileID: 1333130602}
   - component: {fileID: 1333130603}
+  - component: {fileID: 1333130602}
   m_Layer: 0
-  m_Name: block-green (4)
+  m_Name: block-green4
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3144,11 +3260,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1333130599}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 1331383239}
+  - {fileID: 563735261}
+  - {fileID: 928562684}
+  - {fileID: 226869329}
+  - {fileID: 1013134979}
 --- !u!61 &1333130603
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3183,10 +3304,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1347890371}
   - component: {fileID: 1347890370}
-  - component: {fileID: 1347890372}
   - component: {fileID: 1347890373}
+  - component: {fileID: 1347890372}
   m_Layer: 0
-  m_Name: block-purple (8)
+  m_Name: block-purple1
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3258,11 +3379,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1347890369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 364536825}
+  - {fileID: 483762258}
+  - {fileID: 633972404}
+  - {fileID: 186715104}
+  - {fileID: 1999001002}
 --- !u!61 &1347890373
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3297,10 +3423,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1417141183}
   - component: {fileID: 1417141182}
-  - component: {fileID: 1417141184}
   - component: {fileID: 1417141185}
+  - component: {fileID: 1417141184}
   m_Layer: 0
-  m_Name: block-yellow (3)
+  m_Name: block-yellow6
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3372,11 +3498,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1417141181}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 1013134979}
+  - {fileID: 640826258}
+  - {fileID: 563735261}
+  - {fileID: 842196579}
+  - {fileID: 656574097}
+  - {fileID: 1181341230}
+  - {fileID: 61296716}
+  - {fileID: 891610365}
 --- !u!61 &1417141185
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3515,10 +3649,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1999001004}
   - component: {fileID: 1999001003}
-  - component: {fileID: 1999001005}
   - component: {fileID: 1999001006}
+  - component: {fileID: 1999001005}
   m_Layer: 0
-  m_Name: block-purple (7)
+  m_Name: block-purple2
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3590,11 +3724,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1999001002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 483762258}
+  - {fileID: 633972404}
+  - {fileID: 928562684}
+  - {fileID: 1347890369}
+  - {fileID: 1262461252}
 --- !u!61 &1999001006
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3629,10 +3768,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2113788095}
   - component: {fileID: 2113788094}
-  - component: {fileID: 2113788096}
   - component: {fileID: 2113788097}
+  - component: {fileID: 2113788096}
   m_Layer: 0
-  m_Name: block-green (6)
+  m_Name: block-green1
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3704,11 +3843,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2113788093}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843ba625d1f6c0342a48eff472ba1539, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce17da12a6316488cc320d51bb616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 1
-  points: 10
+  points: 50
+  neirbours:
+  - {fileID: 474464815}
+  - {fileID: 1331383239}
+  - {fileID: 364536825}
+  - {fileID: 483762258}
+  - {fileID: 633972404}
 --- !u!61 &2113788097
 BoxCollider2D:
   m_ObjectHideFlags: 0

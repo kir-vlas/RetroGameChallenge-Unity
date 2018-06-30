@@ -18,7 +18,7 @@ public class PacmanMove : MonoBehaviour {
     {
         levelLoading = false;
         gameManager = FindObjectOfType<GameManager>();
-        gameManager.setGame("pacman");
+        gameManager.SetPacmanAsGame();
         playerPosition = transform.position;
         dest = transform.position;
         addUnlockedFruits(gameManager.getFruitCounter());
@@ -91,12 +91,12 @@ public class PacmanMove : MonoBehaviour {
     }
     void FixedUpdate()
     {
-
+        if (gameManager.IsPaused()) return;
         Vector2 p = Vector2.MoveTowards(transform.position, dest, speed);
         GetComponent<Rigidbody2D>().MovePosition(p);
         if (checkDots())
             LoadLevel();
-        if (true)
+        if (false)
         {
             if (Input.GetKey(KeyCode.UpArrow) && valid(Vector2.up))
                 dest = (Vector2)transform.position + Vector2.up;
@@ -107,7 +107,7 @@ public class PacmanMove : MonoBehaviour {
             if (Input.GetKey(KeyCode.LeftArrow) && valid(Vector2.left))
                 dest = (Vector2)transform.position + Vector2.left;
         }
-        if (false)
+        if (true)
         {
             if (directionInput == 1 && valid(Vector2.up))
                 dest = (Vector2)transform.position + Vector2.up;

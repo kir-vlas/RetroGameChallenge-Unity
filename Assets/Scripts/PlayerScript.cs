@@ -23,7 +23,7 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
-        Debug.Log("4575");
+        gameManager.SetArkanoidAsGame();
         playerPosition = gameObject.transform.position;
         pointsText = GameObject.Find("LivesText").GetComponent<Text>();
         pointsText.text = "Lives: " + gameManager.lives ;
@@ -48,7 +48,6 @@ public class PlayerScript : MonoBehaviour
     void RestartGame()
     {
         gameManager.Restart();
-        SceneManager.LoadScene("arkanoid"+gameManager.getLevel());
     }
 
     public void Move(int InputAxis)
@@ -65,11 +64,12 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
+        if (gameManager.IsPaused()) return;
         if (CheckPoints())
         {
             gameManager.LoadNextLevel();
-            Debug.Log(gameManager.getLevel());
         }
+
         if (gameManager.lives == 0)
         {
             RestartGame();
