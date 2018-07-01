@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114585028926226358}
   m_Layer: 0
   m_Name: hidden-block
-  m_TagString: Block
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,6 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30862014a309e8e4899a5edbecdd51db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 24582a010959cb74dac7dfbd171ca0f8, type: 3}
 --- !u!212 &212364593149768914
 SpriteRenderer:
   m_ObjectHideFlags: 1

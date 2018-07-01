@@ -144,6 +144,7 @@ MonoBehaviour:
   - {fileID: 0}
   speed: 0.05
   playerObject: {fileID: 0}
+  sfx: {fileID: 8300000, guid: df33d444ba7b6344688cc774b3d82b64, type: 3}
 --- !u!212 &212833141480487936
 SpriteRenderer:
   m_ObjectHideFlags: 1

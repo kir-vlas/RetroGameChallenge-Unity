@@ -19,14 +19,21 @@ public class DDOL : MonoBehaviour {
     }
 	
 	void Awake () {
-        instance = new DDOL();
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        else
+        {
+            instance = this;
+        }
         DontDestroyOnLoad(transform.gameObject);
     }
 	
    
     public static DDOL GetInstance()
     {
-        if (instance == null) instance = new DDOL();
         return instance;
     }
 

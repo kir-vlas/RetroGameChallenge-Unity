@@ -6,6 +6,8 @@ using System.Collections;
 public class PlayerScript : MonoBehaviour
 {
     GameManager gameManager;
+    SoundLevelManager sounds;
+
 
     public int directionInput;
 
@@ -18,10 +20,12 @@ public class PlayerScript : MonoBehaviour
     private Text pointsText;
     private Text livesText;
 
+    public AudioClip[] sfx;
 
 
     void Start()
     {
+        sounds = FindObjectOfType<SoundLevelManager>();
         gameManager = FindObjectOfType<GameManager>();
         gameManager.SetArkanoidAsGame();
         playerPosition = gameObject.transform.position;
@@ -67,11 +71,13 @@ public class PlayerScript : MonoBehaviour
         if (gameManager.IsPaused()) return;
         if (CheckPoints())
         {
+            sounds.PlaySingle(sfx[1]);
             gameManager.LoadNextLevel();
         }
 
         if (gameManager.lives == 0)
         {
+            sounds.PlaySingle(sfx[0]);
             RestartGame();
         }
 

@@ -34,6 +34,8 @@ public class SelectionScript : MonoBehaviour {
 
 	public void ReturnToMenu()
     {
+        if (paused)
+            gameManager.ResumeGame();
         gameManager.ResetGame();
         SceneManager.LoadScene(0);
     }

@@ -108,13 +108,19 @@ public class GameManager : MonoBehaviour {
     {
         points = 0;
         currentLevel = 1;
+        fruitCounter = 0;
+        easterBlocks = 0;
         lives = MAX_LIVES;
+        MainMenuMusic music = GameObject.FindObjectOfType<MainMenuMusic>();
+        music.Stop();
     }
 
     public void Restart()
     {
         RecordScore();
         points = 0;
+        fruitCounter = 0;
+        easterBlocks = 0;
         lives = MAX_LIVES;
         SceneManager.LoadScene(0);
     }
@@ -160,9 +166,10 @@ public class GameManager : MonoBehaviour {
         Debug.Log("gm");
         DDOL dd = DDOL.GetInstance();
         gameType = "arkanoid";
+        MAX_LIVES = dd.lives;
         currentLevel = dd.level;
         points = dd.points;
-        lives = MAX_LIVES;
+        lives = dd.lives;
     }
 	
 	// Update is called once per frame

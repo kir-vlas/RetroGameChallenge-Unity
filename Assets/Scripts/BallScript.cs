@@ -9,9 +9,12 @@ public class BallScript : MonoBehaviour {
     private Vector3 ballPosition;
     private Vector2 ballInitialForce;
     public GameObject playerObject;
+    public AudioClip sfx;
+    SoundLevelManager sounds;
 
     // Use this for initialization
     void Start () {
+        sounds = GameObject.FindObjectOfType<SoundLevelManager>();
         ballInitialForce = new Vector2(80.0f, 240.0f);
         ballIsActive = false;
         ballPosition = transform.position;
@@ -43,6 +46,7 @@ public class BallScript : MonoBehaviour {
 
         if (ballIsActive && transform.position.y < -0.2f)
         {
+            sounds.PlaySingle(sfx);
             ballIsActive = !ballIsActive;
             GetComponent<Rigidbody2D>().AddForce(ballInitialForce);
             ballPosition.x = playerObject.transform.position.x;

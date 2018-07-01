@@ -7,7 +7,6 @@ public class HighScores {
     
     public static void Record(int highScore)
     {
-        int score;
         string playerName;
         int temp;
         string tempName;

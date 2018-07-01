@@ -52,6 +52,7 @@ GameObject:
   - component: {fileID: 4311827699732434}
   - component: {fileID: 212490224858216300}
   - component: {fileID: 61973915068465980}
+  - component: {fileID: 114118442364632282}
   m_Layer: 0
   m_Name: border-high
   m_TagString: Untagged
@@ -69,6 +70,7 @@ GameObject:
   - component: {fileID: 4984617179686226}
   - component: {fileID: 212629960746358346}
   - component: {fileID: 61082467705848714}
+  - component: {fileID: 114909180277342964}
   m_Layer: 0
   m_Name: border-right
   m_TagString: Untagged
@@ -86,6 +88,7 @@ GameObject:
   - component: {fileID: 4299890615619682}
   - component: {fileID: 212588254666235058}
   - component: {fileID: 61744579048286962}
+  - component: {fileID: 114916511402011518}
   m_Layer: 0
   m_Name: border-left
   m_TagString: Untagged
@@ -237,6 +240,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.31, y: 0.45}
   m_EdgeRadius: 0
+--- !u!114 &114118442364632282
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1657872637949200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe72196dd0b176948a291dcbe905318d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfx: {fileID: 8300000, guid: b93a382faa0ed1a448c5e00cc1f034e6, type: 3}
+--- !u!114 &114909180277342964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1690519231661952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe72196dd0b176948a291dcbe905318d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfx: {fileID: 8300000, guid: b93a382faa0ed1a448c5e00cc1f034e6, type: 3}
+--- !u!114 &114916511402011518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1877015428279282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe72196dd0b176948a291dcbe905318d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfx: {fileID: 8300000, guid: b93a382faa0ed1a448c5e00cc1f034e6, type: 3}
 --- !u!212 &212294271556981972
 SpriteRenderer:
   m_ObjectHideFlags: 1

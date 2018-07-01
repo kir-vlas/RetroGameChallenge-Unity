@@ -6,8 +6,11 @@ public class HiddenBlockScript : MonoBehaviour {
 
     public int points;
     public GameObject[] neirbours;
+    SoundLevelManager sounds;
+    public AudioClip sfx;
 
-	void Start () {
+    void Start () {
+        sounds = GameObject.FindObjectOfType<SoundLevelManager>();
         GetComponent<SpriteRenderer>().enabled = false;
 	}
 
@@ -15,6 +18,7 @@ public class HiddenBlockScript : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Ball")
         {
+            sounds.PlaySingle(sfx);
             GameObject player = GameObject.FindGameObjectsWithTag("Player")[0];
             player.SendMessage("addPoints", points);
             foreach(GameObject neirBlock in neirbours)

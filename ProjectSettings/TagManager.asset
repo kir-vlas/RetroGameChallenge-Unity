@@ -10,6 +10,8 @@ TagManager:
   - Block
   - FruitImage
   - Pause
+  - ScoreLabel
+  - MenuMusic
   layers:
   - Default
   - TransparentFX

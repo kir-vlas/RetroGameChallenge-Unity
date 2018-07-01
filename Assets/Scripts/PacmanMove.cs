@@ -16,6 +16,11 @@ public class PacmanMove : MonoBehaviour {
     private bool levelLoading;
     void Start()
     {
+        MainMenuMusic music = GameObject.FindObjectOfType<MainMenuMusic>();
+        music.Stop();
+        music.source.enabled = false;
+        music.source = GameObject.Find("PacmanTheme").GetComponent<AudioSource>();
+        music.Play();
         levelLoading = false;
         gameManager = FindObjectOfType<GameManager>();
         gameManager.SetPacmanAsGame();
@@ -61,7 +66,11 @@ public class PacmanMove : MonoBehaviour {
         gameManager.lives--;
         pointsText = GameObject.Find("LivesText").GetComponent<Text>();
         pointsText.text = "Lives: " + gameManager.lives;
+        Rigidbody2D player = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+        player.isKinematic = true;
+        player.velocity = Vector2.zero;
         transform.position = playerPosition;
+        player.isKinematic = false;
         GameObject[] ghosts = GameObject.FindGameObjectsWithTag("Enemy");
         foreach(GameObject ghost in ghosts)
         {
@@ -73,7 +82,6 @@ public class PacmanMove : MonoBehaviour {
     void RestartGame()
     {
         gameManager.Restart();
-        SceneManager.LoadScene("pacman" + gameManager.getLevel());
     }
 
     public void Move(int button)
@@ -92,6 +100,10 @@ public class PacmanMove : MonoBehaviour {
     void FixedUpdate()
     {
         if (gameManager.IsPaused()) return;
+        if (gameManager.lives == 0)
+        {
+            RestartGame();
+        }
         Vector2 p = Vector2.MoveTowards(transform.position, dest, speed);
         GetComponent<Rigidbody2D>().MovePosition(p);
         if (checkDots())

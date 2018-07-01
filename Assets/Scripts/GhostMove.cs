@@ -9,6 +9,7 @@ public class GhostMove : MonoBehaviour {
     public GameObject playerObject;
     private GameManager gameManager;
     private Vector3 ghostPosition;
+    public AudioClip sfx;
 
     private void Start()
     {
@@ -45,6 +46,8 @@ public class GhostMove : MonoBehaviour {
     {
         if (co.name == "pacman")
         {
+            SoundLevelManager sounds = GameObject.FindObjectOfType<SoundLevelManager>();
+            sounds.PlaySingle(sfx);
             playerObject.SendMessage("TakeLife");
         }
     }

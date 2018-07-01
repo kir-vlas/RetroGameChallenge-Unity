@@ -80,6 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitsToKill: 1
   points: 10
+  sfx: {fileID: 8300000, guid: e1d60a625c2cfac429ad9202743b82f0, type: 3}
 --- !u!212 &212638658781439386
 SpriteRenderer:
   m_ObjectHideFlags: 1

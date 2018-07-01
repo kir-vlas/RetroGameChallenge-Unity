@@ -91,6 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelStart: 0
   playerObject: {fileID: 0}
+  sfx: {fileID: 8300000, guid: 40cc283eb0849b04d8e077eb237384ea, type: 3}
 --- !u!212 &212116376196738152
 SpriteRenderer:
   m_ObjectHideFlags: 1

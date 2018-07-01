@@ -7,9 +7,13 @@ public class BlockScript : MonoBehaviour {
     public int hitsToKill;
     public int points;
     private int numberOfHits;
+    SoundLevelManager sounds;
+
+    public AudioClip sfx;
 
     // Use this for initialization
     void Start () {
+        sounds = GameObject.FindObjectOfType<SoundLevelManager>();
         numberOfHits = 0;
 	}
 	
@@ -26,11 +30,16 @@ public class BlockScript : MonoBehaviour {
 
             if (numberOfHits == hitsToKill)
             {
+                sounds.PlaySingle(sfx);
                 GameObject player = GameObject.FindGameObjectsWithTag("Player")[0];
 
                 player.SendMessage("addPoints", points);
 
                 Destroy(this.gameObject);
+            }
+            else
+            {
+                sounds.PlaySingle(sfx);
             }
         }
     }

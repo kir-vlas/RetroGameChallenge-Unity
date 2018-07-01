@@ -11,6 +11,7 @@ public class FruitScript : MonoBehaviour {
     public float timeLeft;
     private bool motion = false;
     private GameManager gameManager;
+    public AudioClip sfx;
 
 	void Start () {
         fruitPosition = transform.position;
@@ -43,6 +44,8 @@ public class FruitScript : MonoBehaviour {
     {
         if (collision.name == "pacman")
         {
+            SoundLevelManager sounds = GameObject.FindObjectOfType<SoundLevelManager>();
+            sounds.PlaySingle(sfx);
             GameObject player = GameObject.FindGameObjectsWithTag("Player")[0];
             player.SendMessage("addFruit",fruitType);
             Destroy(gameObject);

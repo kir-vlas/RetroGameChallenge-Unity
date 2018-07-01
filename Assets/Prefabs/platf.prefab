@@ -80,8 +80,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionInput: 0
   playerVelocity: 1
-  boundaryL: -2.25
-  boundaryR: 2.15
+  boundaryL: -2.15
+  boundaryR: 2.05
+  sfx:
+  - {fileID: 8300000, guid: 40cc283eb0849b04d8e077eb237384ea, type: 3}
+  - {fileID: 8300000, guid: eb1ed04b775e33247a7803ad4aad9743, type: 3}
 --- !u!212 &212155378861938608
 SpriteRenderer:
   m_ObjectHideFlags: 1
