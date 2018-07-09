@@ -13,7 +13,7 @@ public class PlayerScript : MonoBehaviour
 
     public float playerVelocity;
     private Vector3 playerPosition;
-
+    private bool newLife = false;
     public float boundaryL;
     public float boundaryR;
 
@@ -35,8 +35,14 @@ public class PlayerScript : MonoBehaviour
         pointsText.text = "Points: " + gameManager.points;
     }
 
+    void NotNew()
+    {
+        newLife = false;
+    }
+
     void addPoints(int points)
     {
+        newLife = false;
         gameManager.points += points;
         pointsText = GameObject.Find("PointsText").GetComponent<Text>();
         pointsText.text = "Points: " + gameManager.points;
@@ -47,6 +53,7 @@ public class PlayerScript : MonoBehaviour
         gameManager.lives--;
         pointsText = GameObject.Find("LivesText").GetComponent<Text>();
         pointsText.text = "Lives: " + gameManager.lives;
+        newLife = true;
     }
 
     void RestartGame()
@@ -66,18 +73,26 @@ public class PlayerScript : MonoBehaviour
         return false;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ball" && !newLife)
+        {
+            sounds.PlaySingle(sfx[0]);
+        }
+    }
+
     void Update()
     {
         if (gameManager.IsPaused()) return;
         if (CheckPoints())
         {
-            sounds.PlaySingle(sfx[1]);
+            sounds.PlaySingle(sfx[2]);
             gameManager.LoadNextLevel();
         }
 
         if (gameManager.lives == 0)
         {
-            sounds.PlaySingle(sfx[0]);
+            sounds.PlaySingle(sfx[1]);
             RestartGame();
         }
 

@@ -12,6 +12,11 @@ public class BallScript : MonoBehaviour {
     public AudioClip sfx;
     SoundLevelManager sounds;
 
+    public bool IsActive()
+    {
+        return ballIsActive;
+    }
+
     // Use this for initialization
     void Start () {
         sounds = GameObject.FindObjectOfType<SoundLevelManager>();
@@ -50,7 +55,7 @@ public class BallScript : MonoBehaviour {
             ballIsActive = !ballIsActive;
             GetComponent<Rigidbody2D>().AddForce(ballInitialForce);
             ballPosition.x = playerObject.transform.position.x;
-            ballPosition.y = 0.371f;
+            ballPosition.y = 0.385f;
             transform.position = ballPosition;           
             playerObject.SendMessage("TakeLife");
         }

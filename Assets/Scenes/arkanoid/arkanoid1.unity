@@ -1466,7 +1466,7 @@ Prefab:
     - target: {fileID: 114413779819254770, guid: 4f8fe18dd5d939544bd4a4cbf2a704d9,
         type: 2}
       propertyPath: sfx.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4171215851743504, guid: 4f8fe18dd5d939544bd4a4cbf2a704d9, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1521,7 +1521,7 @@ Prefab:
         type: 2}
       propertyPath: sfx.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: e1d60a625c2cfac429ad9202743b82f0, type: 3}
+      objectReference: {fileID: 8300000, guid: eb1ed04b775e33247a7803ad4aad9743, type: 3}
     - target: {fileID: 114413779819254770, guid: 4f8fe18dd5d939544bd4a4cbf2a704d9,
         type: 2}
       propertyPath: sfx.Array.data[3]
@@ -1546,12 +1546,12 @@ Prefab:
         type: 2}
       propertyPath: sfx.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 40cc283eb0849b04d8e077eb237384ea, type: 3}
+      objectReference: {fileID: 8300000, guid: 2419d0bf05bb93847bd8704c4aed5e53, type: 3}
     - target: {fileID: 114413779819254770, guid: 4f8fe18dd5d939544bd4a4cbf2a704d9,
         type: 2}
       propertyPath: sfx.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: eb1ed04b775e33247a7803ad4aad9743, type: 3}
+      objectReference: {fileID: 8300000, guid: 40cc283eb0849b04d8e077eb237384ea, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f8fe18dd5d939544bd4a4cbf2a704d9, type: 2}
   m_IsPrefabParent: 0

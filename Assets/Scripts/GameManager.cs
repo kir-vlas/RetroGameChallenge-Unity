@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour {
     public void SetArkanoidAsGame()
     {
         currentGame = 0;
+        gameType = "arkanoid";
     }
 
     private bool IsSecretArkanoidLevelAllowed()
@@ -57,6 +58,7 @@ public class GameManager : MonoBehaviour {
     public void SetPacmanAsGame()
     {
         currentGame = 1;
+        gameType = "pacman";
     }
 
     public void setGame(string game)
@@ -121,6 +123,7 @@ public class GameManager : MonoBehaviour {
         points = 0;
         fruitCounter = 0;
         easterBlocks = 0;
+        currentLevel = 1;
         lives = MAX_LIVES;
         SceneManager.LoadScene(0);
     }

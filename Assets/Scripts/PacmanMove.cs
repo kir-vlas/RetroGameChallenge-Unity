@@ -17,10 +17,14 @@ public class PacmanMove : MonoBehaviour {
     void Start()
     {
         MainMenuMusic music = GameObject.FindObjectOfType<MainMenuMusic>();
-        music.Stop();
-        music.source.enabled = false;
+        if (music.source != null)
+        {
+            music.Stop();
+            music.source.enabled = false;
+        }
         music.source = GameObject.Find("PacmanTheme").GetComponent<AudioSource>();
-        music.Play();
+        music.source.enabled = true;
+        music.source.Play();
         levelLoading = false;
         gameManager = FindObjectOfType<GameManager>();
         gameManager.SetPacmanAsGame();

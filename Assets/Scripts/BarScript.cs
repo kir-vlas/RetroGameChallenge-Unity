@@ -14,6 +14,8 @@ public class BarScript : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Ball")
         {
+            GameObject player = GameObject.FindGameObjectsWithTag("Player")[0];
+            player.SendMessage("NotNew");
             sounds.PlaySingle(sfx);
         }
     }
